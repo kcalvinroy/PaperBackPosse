@@ -20,15 +20,13 @@ app.secret_key = '12345678'
 salt = "5gz69"
 
 
-connection = database.connect(user = 'admin', password = '12345678', host='localhost', database = 'pbpdb')
-connection2 = database.connect(user = 'admin', password = '12345678', host='localhost', database = 'pbpdb')
+connection = database.connect(user = 'e5q9hxt4ztfq9gj4', password = 'x3u5kccywg1ovn1v', host='q0h7yf5pynynaq54.cbetxkdyhwsb.us-east-1.rds.amazonaws.com', database = 'j2c0nme0hohrxwwk')
 cursor = connection.cursor()
-cursor2 = connection2.cursor()
 
 @app.route("/", methods=['GET'])
 def index():
     
-    return render_template("index.html", cursor2=cursor2)
+    return render_template("index.html")
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -59,7 +57,7 @@ def login():
         else:
             # Account not in existance or incorect logins
             msg = 'Incorrect username/password!'
-    return render_template('login.html', msg=msg, cursor2=cursor2)
+    return render_template('login.html', msg=msg)
 
 @app.route('/logout')
 def logout():
