@@ -10,7 +10,6 @@ from fileinput import filename
 from datetime import timedelta
 import mysql.connector as database
 from flask_login import current_user
-from pinata_python.pinning import Pinning
 from werkzeug.utils import secure_filename
 from flask import Flask,render_template, redirect, request, url_for, session, send_file, g
 
