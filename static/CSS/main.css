@@ -1,0 +1,508 @@
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	background-color: #DAE0E6;
+}
+
+.navBar {
+	height: 45px;
+	width: 100%;
+	justify-self: flex-start;
+	background-color: #FFFFFF;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	position: fixed;
+}
+
+
+.logoTextFont2 {
+	color: #8F00FF;
+}
+
+.logo {
+	width: 258px;
+	height: 40px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	align-self: center;
+	margin-left: 22px;
+	padding-right: 0;
+}
+
+.logoIcon {
+	width: 33px;
+	height: 28px;
+}
+
+.logoText {
+	display: flex;
+	flex-direction: row;
+	width: 165px;
+	height: 33px;
+	align-items: center;
+}
+
+.logInButton {
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	width: 171px;
+	height: 33px;
+	color: #FFFFFF;
+	font-size: 20px;
+	background-color: #0079D3;
+	align-self: center;
+	border-radius: 20px;
+	margin-left: 220px;
+}
+
+.profile {
+	justify-self: flex-end;
+	align-self: center;
+	display: flex;
+	flex-direction: row;
+	margin-right: 22px;
+	margin-left: 20px;
+	
+}
+
+.searchBar{
+	align-self: center;
+	width: 578px;
+	height: 35px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	border-radius: 20px;
+	background-color: #E6E6E6;
+	margin-left: 95px;
+	margin-right: 470px;
+}
+
+.searchQueryBox {
+
+	border: none;
+	outline: none;
+	display: inline-block;
+	background-color: #E6E6E6;
+	width: 500px;
+
+}
+
+.SearchIcon {
+	margin-left: 5px;
+}
+
+.sideBar {
+	align-self: flex-start;
+	width: 281px;
+	height: 100%;
+	background-color: #FFFFFF;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	position: fixed;
+	top: 45px;
+}
+
+.joinUsButton {
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	width: 171px;
+	height: 33px;
+	color: #FFFFFF;
+	font-size: 20px;
+	background-color: #0079D3;
+	align-self: center;
+	border-radius: 20px;
+}
+
+.callToActionMessage {
+	width: 259px;
+	height: 198px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+}
+
+.CTAMessage {
+
+	font-weight: 600;
+	font-size: 20px;
+	font-family: Nunito Sans;
+	padding-left: 30px;
+}
+
+.feed {
+	width: 264px;
+	height: 174px;
+	display: flex;
+	flex-direction: column;
+}
+
+.home {
+	width: 253px;
+	height: 38px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 5px;
+	margin-left: 10px;
+	font-size: 14px;
+}
+
+.popular {
+	width: 253px;
+	height: 38px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 5px;
+	margin-left: 10px;
+	font-size: 14px;
+}
+
+.feedTitle {
+	width: 253px;
+	height: 38px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	margin-left: 10px;
+	font-size: 12px;
+}
+
+.topics {
+	width: 264px;
+	height: 174px;
+	display: flex;
+	flex-direction: column;
+
+}
+
+.topicsTitle {
+	width: 253px;
+	height: 38px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 5px;
+	margin-left: 10px;
+	font-size: 12px;
+	font-weight: 300;
+}
+/*Find a better way to declare the style for these classes*/
+.topicFiction {
+	text-align: center;
+	width: 253px;
+	height: 38px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 5px;
+	margin-left: 60px;
+	font-size: 14px;
+}
+
+.topicNonFiction {
+	text-align: center;
+	width: 253px;
+	height: 38px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 5px;
+	margin-left: 60px;
+	font-size: 14px;
+}
+
+.topicchildrensLiterature {
+	text-align: center;
+	width: 253px;
+	height: 38px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 5px;
+	margin-left: 60px;
+	font-size: 14px;
+}
+
+.topicPoetry {
+	text-align: center;
+	width: 253px;
+	height: 38px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 5px;
+	margin-left: 60px;
+	font-size: 14px;
+}
+
+.topicGraphicNovels {
+	text-align: center;
+	width: 253px;
+	height: 38px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 5px;
+	margin-left: 60px;
+	font-size: 14px;
+}
+/*-------------------------------------------*/
+
+.loginCard {
+	width: 394px;
+	height: 691px;
+	background-color: #FFFFFF;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 165px;
+	right: 635px;
+	border-radius: 20px;
+	box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+.OR {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-size: 12px;
+}
+
+.section1 {
+	display: flex;
+	flex-direction: row;
+}
+
+.cardMessageText {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 317px;
+}
+
+.X_Button {
+	margin-left: 26px;
+	margin-top: 23px;
+}
+
+.section2 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.continueWithGoogle {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-size: 12px;
+	gap: 50px;
+	border-radius: 20px;
+	border: 1px solid;
+	width: 295px;
+}
+
+.continueWithApple {
+	margin-top: 15px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-size: 12px;
+	gap: 50px;
+	border-radius: 20px;
+	border: 1px solid;
+	width: 295px;
+}
+
+.LogInWithUsername {
+	display: flex;
+	flex-direction: column;
+}
+
+.usernameLogIn {
+	width: 295px;
+	height: 39px;
+	border-radius: 20px;
+	align-self: center;
+	margin-left: 50px;
+}
+
+.passwordLogin {
+	margin-top: 15px;
+	width: 295px;
+	height: 39px;
+	border-radius: 20px;
+	align-self: center;
+	margin-left: 50px;
+}
+
+.logInButtonLoginCard {
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	width: 295px;
+	height: 39px;
+	color: #FFFFFF;
+	font-size: 20px;
+	background-color: #D93A00;
+	align-self: center;
+	border-radius: 20px;
+	margin-left: 50PX;
+}
+
+.SignUpCard {
+	width: 394px;
+	height: 691px;
+	background-color: #FFFFFF;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 165px;
+	right: 635px;
+	border-radius: 20px;
+	box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.25);
+
+}
+
+.SignUpWithGoogleOrApple {
+	display: flex;
+	flex-direction: column;
+
+}
+
+.SignUpWithEmail {
+	display: flex;
+	flex-direction: column;
+}
+
+.signUpButton {
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	width: 295px;
+	height: 39px;
+	color: #FFFFFF;
+	font-size: 14px;
+	background-color: #D93A00;
+	align-self: center;
+	border-radius: 20px;
+	margin-left: 50PX;
+	margin-top: 15px;
+}
+
+.createUsernameAndPasswordCard {
+	width: 394px;
+	height: 691px;
+	background-color: #FFFFFF;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 165px;
+	right: 635px;
+	border-radius: 20px;
+	box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+.addBook {
+	width: 720px;
+	height: 480px;
+	background-color: #FFFFFF;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 165px;
+	right: 635px;
+	border-radius: 20px;
+	box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+.books {
+	padding-top: 100px;
+	padding-right: 100px;
+	padding-left: 100px;
+	width: 1200px;
+	height: fit-content;
+	background-color: #FFFFFF;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 55px;
+	right: 135px;
+	border-radius: 20px;
+	box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+.topIcons {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 30px;
+
+}
+
+.cardMessageTextII {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 350px;
+}
+
+
+/* ------------------------------------------------------------------- 
+ * ## tables
+ * ------------------------------------------------------------------- */
+ table {
+	border-width: 0;
+	width: 100%;
+	max-width: 100%;
+	font-family: "Gothic A1", sans-serif;
+	border-collapse: collapse;
+  }
+  
+  th,
+  td {
+	padding: 1.5rem 3.2rem;
+	text-align: left;
+	border-bottom: 1px solid #e0e0e0;
+  }
+  
+  th {
+	color: #02021d;
+	font-family: "Gothic A1", sans-serif;
+	font-weight: 700;
+  }
+  
+  th:first-child,
+  td:first-child {
+	padding-left: 0;
+  }
+  
+  th:last-child,
+  td:last-child {
+	padding-right: 0;
+  }
+  
+  .table-responsive {
+	overflow-x: auto;
+	-webkit-overflow-scrolling: auto;
+  }
+  

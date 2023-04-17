@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block title %}Add Book{% endblock %}
+
+{% block content %}
+<div class="books">
+    <div class="table-responsive">
+        <table>
+                <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Availability</th>
+                </thead>
+                <tbody>
+                {% for (userI, title, author, category, descr, avail) in cursor %}
+                <tr>
+                    {% if RoleID == '2' or RoleID == '3' %}
+                    <td>{{ caseID }}</td>
+                    <td>{{ evidenceID }}</td>
+                    {% endif %}
+                    <td>{{ title }}</td>
+                    <td>{{ author }}</td>
+                    <td>{{ category }}</td>
+                    <td>{{ descr }}</td>
+                    <td>{{ avail }}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

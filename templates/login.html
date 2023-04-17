@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div  class="createUsernameAndPasswordCard">
+    <div class="cardMessageTextII">
+        <h3 style="margin-left: 40px; font-size: 20px; margin-bottom: 5px;">Login</h3>
+        <form action="{{ url_for('login') }}" method="post">
+            <div>
+                <label class='usernameLogIn' for="username">Username:</label>
+                <input class="usernameLogIn" type="text" placeholder="Username" name='username' id="username" required>
+            </div>
+            <div>
+                <label class='passwordLogin' for="password">Password:</label>
+                <input class="passwordLogin" type="password" name="password" id="password" required>
+            </div>
+            {% if msg %}
+            <div class="alert-box alert-box--error hideit">
+                <p>{{ msg }}</p>
+                <i class="fa fa-times alert-box__close" aria-hidden="true"></i>
+            </div>
+            {% endif %}
+            <input class="logInButtonLoginCard" type="submit" value="Login">
+        </form>
+        <div>
+            <button class="logInButtonLoginCard">
+                <a href="{{ url_for('register') }}" title="Sign UP">SignUp</a></button>
+        </div>
+        
+    </div>
+</div>
+{% endblock %}

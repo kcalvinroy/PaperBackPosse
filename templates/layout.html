@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{% block title %}{% endblock %}</title>
+	<link rel="stylesheet" type="text/css" href="static/CSS/main.css">
+</head>
+<body class="container">
+	<div class="navBar" class="navBarItemsFlexDisplay">
+		<div class="logo">
+			<div class="logoIcon">
+				<img src="static/Assets/PaperbackPosseLogoIcon.svg">
+			</div>
+			<div class="logoText">
+				<div class="logoTextFont">Paperback</div>
+				<div class="logoTextFont2">Posse</div>
+			</div>
+		</div>
+		<div class="searchBar">
+			<div class="SearchIcon">
+			</div>
+			<div class="searchSpace">
+			{% if 'loggedin' in session %}
+			<h2>Welcome, {{ session['username'] }}</h2>
+			
+			{% endif %}
+			</div>
+		</div>
+		<button class="logInButton">
+			{% if 'loggedin' in session %}
+			<a href="{{ url_for('logout') }}" title="Logout">Log Out</a></button>
+			{% endif %}
+			{% if not 'loggedin' in session %}
+			<a href="{{ url_for('login') }}" title="Login">Login</a></button>
+			{% endif %}
+	</div>
+	<div class="sideBar">
+		<div class="feed">
+			<div class="feedTitle"><p>Feed</p></div>
+			<div class="home">
+				<div class="homeIcon">
+					<img src="static/Assets/homeIcon.svg">
+				</div>
+				<div><p><a href="{{ url_for('mybooks') }}" title="Intro">My Library</a></p></div>
+			</div>
+			<div class="popular">
+				<div class="popularIcon">
+					<img src="static/Assets/popularIcon.svg">
+				</div>
+				<div><p><a href="{{ url_for('books') }}" title="Intro">Book database</a></p></div>
+			</div>
+			<div class="popular">
+				<div><p><a href="{{ url_for('addBook') }}" title="Intro">Add Book</a></p></div>
+			</div>
+		</div>
+		<div class="topics">
+			<div class="topicsTitle"><H1>Categories</H1></div>
+			<div class="topic"><a href="/cat_classic" title="Intro">Classic</a></div>
+			<div class="topic"><a href="/cat_Dystopian" title="Intro">Dystopian</a></div>
+			<div class="topic"><a href="/cat_Fantasy" title="Intro">Fantasy</a></div>
+			<div class="topic"><a href="/cat_Romance" title="Intro">Romance</a></div>
+			<div class="topic"><a href="/cat_Coming-of-age" title="Intro">Coming-of-age</a></div>
+			<div class="topic"><a href="/cat_Science Fiction" title="Intro">Science Fiction</a></div>
+			<div class="topic"><a href="/cat_Mystery" title="Intro">Mystery</a></div>
+			<div class="topic"><a href="/cat_Young Adult" title="Intro">Young Adult</a></div>
+			
+		</div>
+		
+	</div>
+	{% block content %}{% endblock %}
+</body>
+</html>

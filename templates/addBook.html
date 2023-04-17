@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+
+{% block title %}Add Book{% endblock %}
+
+{% block content %}
+<div  class="addBook">
+    <div class="cardMessageTextII">
+        <h3 style="margin-left: 40px; font-size: 20px; margin-bottom: 5px;">Book Details</h3>
+        <form action="{{ url_for('addBook') }}" method="post" autocomplete="on">
+            <div>
+                <label class='usernameLogIn' for="sampleInput">Title:</label>
+                <input class="usernameLogIn" type="text" placeholder="Title" id="title" name='title' required>
+            </div>
+            <div>
+                <label class='usernameLogIn' for="sampleInput">Author:</label>
+                <input class="usernameLogIn" type="text" placeholder="Author" id="author" name='author' required>
+            </div>
+            <div>
+                <label class="usernameLogIn" for="category">Category:</label>
+                <div class="">
+                    <select class="usernameLogIn" id="category" name="category" >
+                        <option value="Classic">Classic</option>
+                        <option value="Dystopian">Dystopian</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Coming-of-age">Coming-of-age</option>
+                        <option value="Science Fiction">Science Fiction</option>
+                        <option value="Mystery">Mystery</option>
+                        <option value="Young Adult">Young Adult</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <label class='usernameLogIn' for="sampleInput">Description:</label>
+                <input class="usernameLogIn" type="text" placeholder="Description" id="descr" name="descr" required>
+            </div>
+            <div>
+                <label class="usernameLogIn" for="avail">Availability:</label>
+                <div class="">
+                    <select class="usernameLogIn" id="avail" name="avail" >
+                        <option value="Available">Available</option>
+                        <option value="Borrowed">Borrowed</option>
+                    </select>
+                </div>
+            </div>
+            {% if mes %}
+            <div class="alert-box alert-box--success hideit">
+                <p>{{ mes }}</p>
+                <i class="fa fa-times alert-box__close" aria-hidden="true"></i>
+            </div><!-- end success -->
+            {% endif %}
+            {% if msg %}
+            <div class="alert-box alert-box--error hideit">
+                <p>{{ msg }}</p>
+                <i class="fa fa-times alert-box__close" aria-hidden="true"></i>
+            </div>
+            {% endif %}
+            <input class="logInButtonLoginCard" type="submit" value="Register Title">
+        </form>
+    </div>
+</div>
+{% endblock %}
